@@ -6,7 +6,7 @@ ViewData["Title"] = "Erstellen oder Bearbeiten";
 
 
 
-<form asp-controller="JobPosting" asp-action="CreateEditJob">
+<form asp-controller="JobPosting" asp-action="CreateEditJob" enctype="multipart/form-data">
     <div class="card">
         <div class="card-header">
             <h5>Neues Inserat bearbeiten</h5>
@@ -58,6 +58,12 @@ ViewData["Title"] = "Erstellen oder Bearbeiten";
                 </div>
                 <div class="col">
                     <input class="form-control" asp-for="ContactMail" type="email" placeholder="Wie lautet deine Kontakt E-Mail-Adresse: "/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label>Bild</label>
+                    <input class="form-control" name="file" type="file" />
                 </div>
             </div>
 
